@@ -1,0 +1,113 @@
+.hero-container {
+    width: 100%;
+}
+
+.hero-epic {
+    position: relative;
+    min-height: 100vh;
+    /*width: 100%;*/
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f2f2f2;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    background-color: #2f5d3a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/*.hero {*/
+/*    min-height: 100vh;*/
+/*    background-color: #f6e7cf;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    padding: 2rem;*/
+/*}*/
+
+/*.hero-content {*/
+/*    max-width: 900px;*/
+/*    text-align: center;*/
+/*}*/
+
+.hero-logo {
+    width: 200px;
+    margin-bottom: 2rem;
+}
+
+/*.hero h1 {*/
+/*    font-size: clamp(2.5rem, 5vw, 4rem);*/
+/*    color: #2f5d3a;*/
+/*    line-height: 1.1;*/
+/*    margin-bottom: 1.5rem;*/
+/*    font-weight: 800;*/
+/*}*/
+
+/*.hero p {*/
+/*    font-size: 1.2rem;*/
+/*    color: #1f1f1f;*/
+/*    margin-bottom: 2.5rem;*/
+/*    max-width: 600px;*/
+/*    margin-left: auto;*/
+/*    margin-right: auto;*/
+/*}*/
+
+/*.hero-button {*/
+/*    display: inline-block;*/
+/*    padding: 0.9rem 2rem;*/
+/*    background-color: #2f5d3a;*/
+/*    color: #fff;*/
+/*    text-decoration: none;*/
+/*    font-weight: 600;*/
+/*    border-radius: 6px;*/
+/*    transition: transform 0.2s ease, box-shadow 0.2s ease;*/
+/*}*/
+
+/*.hero-button:hover {*/
+/*    transform: translateY(-2px);*/
+/*    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);*/
+/*}*/
