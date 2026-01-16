@@ -1,11 +1,9 @@
 import "./Hero.css";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
-import logo from "../../assets/vieriVanLogo.png";
-import heroBg from "../../assets/hero-img.png";
+import heroBg from "../../assets/sfondo5.jpeg";
 
 function Hero() {
     const scrollToSection = useSmoothScroll(90);
-
     return (
         <section
             className="hero-container" id="hero"
@@ -18,22 +16,23 @@ function Hero() {
                 <div className="hero-overlay"></div>
 
                 <div className="hero-content">
-                    <img src={logo} alt="VieriVan logo" className="hero-logo" />
+                    <div className="hero-logo" />
 
-                    <h1>
-                        Trasformiamo van <br /> in libertà su quattro ruote
-                    </h1>
+                    <div className="hero-title-container">
+                        <h1>
+                            Trasformiamo van <br /> in libertà su quattro ruote
+                        </h1>
 
-                    <p>
-                        Progetti artigianali su misura per chi non vuole solo viaggiare,
-                        ma vivere la strada.
-                    </p>
-
-                    <a key={"#services"}
-                       onClick={() => scrollToSection("services")}
-                       className="hero-button">
-                        Scopri i progetti
-                    </a>
+                        <p>
+                            Progetti artigianali su misura per chi non vuole solo viaggiare,
+                            ma vivere la strada.
+                        </p>
+                        <a key={"#services"}
+                           onClick={() => scrollToSection("services")}
+                           className="hero-button">
+                            Scopri i progetti
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

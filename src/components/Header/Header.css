@@ -15,7 +15,8 @@
 .header.scrolled {
     opacity: 100%;
     /*background: rgba(246, 231, 207, 0.95);*/
-    background: rgb(235 231 180 / 95%);
+    /*background: rgb(235 231 180 / 95%);*/
+    background: rgb(255 236 204);
     backdrop-filter: blur(6px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     /*padding: 0.2rem 0.2rem;*/
@@ -31,7 +32,7 @@
 
 /* LOGO */
 .header-logo {
-    /*height: 42px;*/
+    height: 100px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }

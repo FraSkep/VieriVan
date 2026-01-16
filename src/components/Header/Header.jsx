@@ -1,7 +1,9 @@
 import "./Header.css";
 import { useEffect, useState } from "react";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
-import logo from "../../assets/vieriVanLogo.png";
+// import logo from "../../assets/vieriVanLogo.png";
+import logo from "../../assets/loghi/logo1t.png";
+import miniLogo from "../../assets/loghi/logo4t.png"
 
 const sections = ["hero", "services", "gallery", "testimonials", "contact"];
 
@@ -34,19 +36,6 @@ function Header() {
         setMenuOpen(false);
     };
 
-    // const handleScrollTo = (id) => {
-    //     const section = document.getElementById(id);
-    //     const headerOffset = 50; // altezza del tuo header
-    //     const elementPosition = section.getBoundingClientRect().top;
-    //     const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-    //
-    //     window.scrollTo({
-    //         top: offsetPosition,
-    //         behavior: "smooth",
-    //     });
-    //
-    //     setMenuOpen(false);
-    // };
     return (
         <header className={`header ${scrolled ? "scrolled" : ""}`}>
             <div className="header-content">
@@ -68,20 +57,8 @@ function Header() {
                             {section === "contact" && "Contatti"}
                         </a>
                     ))}
-                    {/*{sections.map((section) => (*/}
-                    {/*    <a*/}
-                    {/*        key={section}*/}
-                    {/*        href={`#${section}`}*/}
-                    {/*        className={activeSection === section ? "active" : ""}*/}
-                    {/*    >*/}
-                    {/*        {section === "hero" && "Home"}*/}
-                    {/*        {section === "services" && "Servizi"}*/}
-                    {/*        {section === "gallery" && "Lavori"}*/}
-                    {/*        {section === "testimonials" && "Testimonianze"}*/}
-                    {/*        {section === "contact" && "Contatti"}*/}
-                    {/*    </a>*/}
-                    {/*))}*/}
                 </nav>
+                <img src={miniLogo} alt="VieriVanLogo" className="header-logo" />
 
                 {/* HAMBURGER */}
                 <div

@@ -1,8 +1,7 @@
 .final-cta {
     position: relative;
     min-height: 80vh;
-    background: url("/src/assets/van-sunset.png") center/contain no-repeat;
-    background-size: 52%;
+    background: url("/src/assets/sfondo4.jpeg") center/cover no-repeat;
     /*opacity: 80%;*/
     display: flex;
     align-items: center;
@@ -97,4 +96,19 @@
     display: flex;
     align-items: center;
     gap: 0.3rem;
+}
+
+@media (max-width: 1200px) {
+    .final-cta {
+        position: relative;
+        min-height: 80vh;
+        background: url("/src/assets/sfondo4.jpeg") center/cover no-repeat;
+        /*background-size: 52%;*/
+        /*opacity: 80%;*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 2rem;
+        overflow: hidden;
+    }
 }

@@ -9,6 +9,7 @@ import {
     FaWater,
 } from "react-icons/fa";
 import useFadeInOnScroll from "../../hooks/useFadeInOnScroll.jsx";
+import {Parallax} from "react-scroll-parallax";
 
 function Services() {
     const cardsRef = useRef([]);
@@ -69,13 +70,15 @@ function Services() {
 
     return (
         <section id="services" className="services fade-in-section" ref={fadeRef}>
-            <div className="services-header">
-                <h2>Cosa possiamo fare per il tuo van</h2>
-                <p>
-                    Ogni progetto nasce su misura. Qui trovi le principali aree su cui
-                    interveniamo per trasformare un furgone in casa.
-                </p>
-            </div>
+            <Parallax speed={10}>
+                <div className="services-header">
+                    <h2>Cosa possiamo fare per il tuo van</h2>
+                    <p>
+                        Ogni progetto nasce su misura. Qui trovi le principali aree su cui
+                        interveniamo per trasformare un furgone in casa.
+                    </p>
+                </div>
+            </Parallax>
 
             <div className="services-grid">
                 {services.map((service, index) => (

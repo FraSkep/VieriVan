@@ -53,11 +53,20 @@
     font-weight: 600;
     border-radius: 6px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 200px;
 }
 
 .hero-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    color: #cccaca;
+
+}
+
+.hero-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*.hero {*/
@@ -75,7 +84,9 @@
 /*}*/
 
 .hero-logo {
-    width: 200px;
+    background: url("/src/assets/loghi/logo5t.png") center/cover no-repeat;
+    position: relative;
+    min-height: 30vh;
     margin-bottom: 2rem;
 }
 
