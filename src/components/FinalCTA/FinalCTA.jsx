@@ -16,7 +16,7 @@ function FinalCTA() {
             <Parallax speed={35} className="final-cta-content">
                 <h2>
                     Il tuo van non e' un mezzo. <br />
-                    E' una promessa di libertà.
+                    E' una promessa di liberta'.
                 </h2>
 
                 <p>
