@@ -15,8 +15,8 @@ function FinalCTA() {
             <div className="final-cta-overlay"></div>
             <Parallax speed={35} className="final-cta-content">
                 <h2>
-                    Il tuo van non è un mezzo. <br />
-                    È una promessa di libertà.
+                    Il tuo van non e' un mezzo. <br />
+                    E' una promessa di libertà.
                 </h2>
 
                 <p>
