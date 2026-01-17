@@ -33,7 +33,9 @@ import wolly7 from "../../assets/wolly/wolly7.jpeg"
 
 import "./Gallery.css";
 import useFadeInOnScroll from "../../hooks/useFadeInOnScroll.jsx";
+import { motion, AnimatePresence } from "framer-motion";
 import {FiX} from "react-icons/fi";
+import useIsMobile from "../../hooks/useIsMobile.jsx";
 
 const projects = [
     {
@@ -71,10 +73,16 @@ const projects = [
 const Gallery = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const isMobile = useIsMobile(1200);
+    const isMobileHorizontal = useIsMobile(1200);
     const fadeRef = useFadeInOnScroll();
 
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
+    const [direction, setDirection] = useState(0);
+    // 1 = avanti (swipe left)
+    // -1 = indietro (swipe right)
+
 
     useEffect(() => {
         if (selectedProject) {
@@ -89,6 +97,34 @@ const Gallery = () => {
     }, [selectedProject]);
 
 
+    const handleNextMobile = () => {
+        setDirection(1);
+        setCurrentImageIndex((prev) =>
+            prev === selectedProject.images.length - 1 ? 0 : prev + 1
+        );
+    };
+
+    const handlePrevMobile = () => {
+        setDirection(-1);
+        setCurrentImageIndex((prev) =>
+            prev === 0 ? selectedProject.images.length - 1 : prev - 1
+        );
+    };
+
+    const swipeVariants = {
+        enter: (direction) => ({
+            x: direction > 0 ? 100 : -100,
+            opacity: 0
+        }),
+        center: {
+            x: 0,
+            opacity: 1
+        },
+        exit: (direction) => ({
+            x: direction > 0 ? -100 : 100,
+            opacity: 0
+        })
+    };
 
     const handlePrev = () => {
         setCurrentImageIndex((prev) =>
@@ -131,26 +167,52 @@ const Gallery = () => {
                     <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
 
                         <div className="lightbox-slider">
-                            <img
-                                src={selectedProject.images[currentImageIndex]}
-                                alt={selectedProject.title}
-                                className="lightbox-image"
-                                onTouchStart={(e) =>
-                                    (touchStartX.current = e.changedTouches[0].screenX)
-                                }
-                                onTouchEnd={(e) => {
-                                    touchEndX.current = e.changedTouches[0].screenX;
+                            {isMobile ?
+                                <AnimatePresence initial={false} custom={direction}>
+                                    <motion.img
+                                        key={currentImageIndex}
+                                        src={selectedProject.images[currentImageIndex]}
+                                        alt={selectedProject.title}
+                                        className="lightbox-image"
+                                        variants={swipeVariants}
+                                        custom={direction}
+                                        initial="enter"
+                                        animate="center"
+                                        exit="exit"
+                                        transition={{ duration: 0.35, ease: "easeOut" }}
+                                        drag="x"
+                                        dragConstraints={{ left: 0, right: 0 }}
+                                        dragElastic={0.15}
+                                        dragMomentum={false}
+                                        onDragEnd={(e, info) => {
+                                            if (info.offset.x < -100) handleNextMobile();
+                                            if (info.offset.x > 100) handlePrevMobile();
+                                        }}
+                                        style={{ position: "absolute" }}
+                                    />
+                                </AnimatePresence> :
+                                <>
+                                    <img
+                                        src={selectedProject.images[currentImageIndex]}
+                                        alt={selectedProject.title}
+                                        className="lightbox-image"
+                                        onTouchStart={(e) =>
+                                            (touchStartX.current = e.changedTouches[0].screenX)
+                                        }
+                                        onTouchEnd={(e) => {
+                                            touchEndX.current = e.changedTouches[0].screenX;
 
-                                    if (touchStartX.current - touchEndX.current > 50) handleNext();
-                                    if (touchEndX.current - touchStartX.current > 50) handlePrev();
-                                }}
-                            />
-                            <div className="slider-controls">
-                                <button className="slider-btn" onClick={handlePrev}>‹</button>
-                                <button className="slider-btn" onClick={handleNext}>›</button>
-                            </div>
+                                            if (touchStartX.current - touchEndX.current > 50) handleNext();
+                                            if (touchEndX.current - touchStartX.current > 50) handlePrev();
+                                        }}
+                                    />
+                                    <div className="slider-controls">
+                                     <button className="slider-btn" onClick={handlePrev}>‹</button>
+                                    <button className="slider-btn" onClick={handleNext}>›</button>
+                                    </div>
+                                </>
+                            }
                         </div>
-
                         <div className="slider-dots">
                             {selectedProject.images.map((_, i) => (
                                 <span

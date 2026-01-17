@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "frame": "^1.0.0-alpha.2",
+    "framer-motion": "^12.26.2",
+    "motion": "^12.26.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
