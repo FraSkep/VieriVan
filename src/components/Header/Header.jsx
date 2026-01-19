@@ -4,14 +4,16 @@ import useSmoothScroll from "../../hooks/useSmoothScroll";
 // import logo from "../../assets/vieriVanLogo.png";
 import logo from "../../assets/loghi/logo1t.png";
 import miniLogo from "../../assets/loghi/logo4t.png"
+import useIsMobile from "../../hooks/useIsMobile.jsx";
 
-const sections = ["hero", "services", "gallery", "testimonials", "contact"];
+const sections = ["hero", "gallery", "services", "testimonials", "contact"];
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState("hero");
     const [menuOpen, setMenuOpen] = useState(false);
     const scrollToSection = useSmoothScroll(90);
+    const isMobile = useIsMobile(1200);
 
     useEffect(() => {
         const onScroll = () => {
@@ -51,14 +53,14 @@ function Header() {
                             className={activeSection === section ? "active" : ""}
                         >
                             {section === "hero" && "Home"}
-                            {section === "services" && "Servizi"}
                             {section === "gallery" && "Lavori"}
+                            {section === "services" && "Servizi"}
                             {section === "testimonials" && "Testimonianze"}
                             {section === "contact" && "Contatti"}
                         </a>
                     ))}
                 </nav>
-                <img src={miniLogo} alt="VieriVanLogo" className="header-logo" />
+                { !isMobile ? <img src={miniLogo} alt="VieriVanLogo" className="header-logo" /> : <></>}
 
                 {/* HAMBURGER */}
                 <div

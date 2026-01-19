@@ -6,6 +6,7 @@ import Testimonials from "./components/Testimonials/Testimonials.jsx";
 import Header from "./components/Header/Header.jsx";
 import FinalCTA from "./components/FinalCTA/FinalCTA.jsx";
 import { ParallaxProvider } from "react-scroll-parallax";
+import Form from "./components/Form/Form.jsx";
 
 function App() {
 
@@ -14,8 +15,8 @@ function App() {
           <>
               <Header/>
               <Hero/>
-              <Services/>
               <Gallery/>
+              <Services/>
               <Testimonials/>
               <FinalCTA/>
           </>

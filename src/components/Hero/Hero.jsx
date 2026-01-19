@@ -1,16 +1,26 @@
 import "./Hero.css";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
-import heroBg from "../../assets/sfondo5.jpeg";
+import heroBg from "../../assets/vieri_surf.jpeg";
+import useIsMobile from "../../hooks/useIsMobile.jsx";
 
 function Hero() {
     const scrollToSection = useSmoothScroll(90);
+    const isMobile = useIsMobile(780);
+
+    const heroStyle = {
+        background: `url(${heroBg}) ${
+            isMobile ? "left" : "center"
+        }/cover no-repeat`
+    };
+
     return (
         <section
             className="hero-container" id="hero"
         >
             <div
+                id="hero-bg"
                 className="hero-epic"
-                style={{ backgroundImage: `url(${heroBg})` }}
+                style={heroStyle}
             >
 
                 <div className="hero-overlay"></div>
