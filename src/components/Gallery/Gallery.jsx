@@ -32,10 +32,10 @@ import wolly6 from "../../assets/wolly/wolly6.jpeg"
 import wolly7 from "../../assets/wolly/wolly7.jpeg"
 
 import "./Gallery.css";
-import useFadeInOnScroll from "../../hooks/useFadeInOnScroll.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 import {FiX} from "react-icons/fi";
 import useIsMobile from "../../hooks/useIsMobile.jsx";
+import {BiChevronLeftCircle, BiChevronRightCircle} from "react-icons/bi";
 
 const projects = [
     {
@@ -74,8 +74,8 @@ const Gallery = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const isMobile = useIsMobile(1200);
-    const isMobileHorizontal = useIsMobile(1200);
-    const fadeRef = useFadeInOnScroll();
+    // const isMobileHorizontal = useIsMobile(1200);
+    // const fadeRef = useFadeInOnScroll();
 
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
@@ -207,8 +207,8 @@ const Gallery = () => {
                                         }}
                                     />
                                     <div className="slider-controls">
-                                     <button className="slider-btn" onClick={handlePrev}>‹</button>
-                                    <button className="slider-btn" onClick={handleNext}>›</button>
+                                     <BiChevronLeftCircle className="slider-btn" onClick={handlePrev}/>
+                                    <BiChevronRightCircle className="slider-btn" onClick={handleNext}/>
                                     </div>
                                 </>
                             }

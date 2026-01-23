@@ -1,0 +1,28 @@
+{
+  "data": [
+      {
+      "name": "Sara",
+      "van": "Opel Vivaro",
+      "image": "/data/testimonials_img/GaneshVan.jpeg",
+      "text": "Dopo mesi di incertezze e confusione è arrivato Vieri, con tanta pazienza, ad aiutarmi e dare vita al mio sogno su due ruote; Ganesh (così è stato ribattezzato il mio Opel Vivaro) è bellissimo, e per ogni problema Vieri è disponibile a aiutarmi anche a distanza. continuerò a consigliarlo ad amici e amici di amici. grazie ❤️"
+      },
+      {
+      "name": "Oliviero",
+      "van": "Sprinter 4x4",
+      "image": "/data/testimonials_img/oliviero5.jpeg",
+      "text": "Ci ha ascoltati davvero. Viaggiamo con il cane, facciamo surf, viviamo fuori. Il van è diventato parte del nostro stile di vita."
+      },
+      {
+      "name": "Davide",
+      "van": "Caddy",
+      "image": "/data/testimonials_img/caddyfornia1.jpeg",
+      "text": "Zero fronzoli, solo cose fatte bene. Dopo due anni e migliaia di chilometri è ancora perfetto."
+      },
+      {
+      "name": "Wolly",
+      "van": "Transporter T6",
+      "image": "/data/testimonials_img/img.png",
+      "text": "Zero fronzoli, solo cose fatte bene. Dopo due anni e migliaia di chilometri è ancora perfetto."
+      }
+  ]
+}

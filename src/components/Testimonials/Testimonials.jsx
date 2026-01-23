@@ -1,16 +1,23 @@
 import "./Testimonials.css";
-import { useEffect, useRef } from "react";
+import {useEffect, useRef, useState} from "react";
 import useFadeInOnScroll from "../../hooks/useFadeInOnScroll.jsx";
-import ganesh from "../../assets/testimonials/GaneshVan.jpeg";
-import olivieroVan from "../../assets/testimonials/oliviero5.jpeg";
-import caddyfornia from "../../assets/testimonials/caddyfornia1.jpeg"
-import wollyVan from "../../assets/testimonials/img.png"
 
 function Testimonials() {
+    const [testimonials, setTestimonials] = useState([]);
     const cardsRef = useRef([]);
     const fadeRef = useFadeInOnScroll();
 
     useEffect(() => {
+        fetch("/data/testimonials.json")
+            .then((res) => res.json())
+            .then(((json) => setTestimonials(json.data)))
+            .catch((err) => console.error(err));
+    }, []);
+
+
+    useEffect(() => {
+        if (!testimonials.length) return;
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -24,34 +31,7 @@ function Testimonials() {
 
         cardsRef.current.forEach((el) => el && observer.observe(el));
         return () => observer.disconnect();
-    }, []);
-
-    const testimonials = [
-        {
-            name: "Sara",
-            van: "Opel Vivaro",
-            image: ganesh,
-            text: "Dopo mesi di incertezze e confusione è arrivato Vieri, con tanta pazienza, ad aiutarmi e dare vita al mio sogno su due ruote; Ganesh (così è stato ribattezzato il mio Opel Vivaro) è bellissimo, e per ogni problema Vieri è disponibile a aiutarmi anche a distanza. continuerò a consigliarlo ad amici e amici di amici. grazie ❤️",
-        },
-        {
-            name: "Oliviero",
-            van: "Sprinter 4x4",
-            image: olivieroVan,
-            text: "Ci ha ascoltati davvero. Viaggiamo con il cane, facciamo surf, viviamo fuori. Il van è diventato parte del nostro stile di vita.",
-        },
-        {
-            name: "Davide",
-            van: "Caddy",
-            image: caddyfornia,
-            text: "Zero fronzoli, solo cose fatte bene. Dopo due anni e migliaia di chilometri è ancora perfetto.",
-        },
-        {
-            name: "Wolly",
-            van: "Transporter T6",
-            image: wollyVan,
-            text: "Zero fronzoli, solo cose fatte bene. Dopo due anni e migliaia di chilometri è ancora perfetto.",
-        }
-    ];
+    }, [testimonials]);
 
     return (
         <section className="testimonials fade-in-section" id="testimonials" ref={fadeRef}>
