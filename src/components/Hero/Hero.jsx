@@ -1,6 +1,7 @@
 import "./Hero.css";
 import useSmoothScroll from "../../hooks/useSmoothScroll";
 import heroBg from "../../assets/vieri_surf.jpeg";
+import heroBgMobile from "../../assets/mobileBG.jpeg";
 import useIsMobile from "../../hooks/useIsMobile.jsx";
 
 function Hero() {
@@ -8,9 +9,7 @@ function Hero() {
     const isMobile = useIsMobile(780);
 
     const heroStyle = {
-        background: `url(${heroBg}) ${
-            isMobile ? "left" : "center"
-        }/cover no-repeat`
+        background: isMobile ? `url(${heroBgMobile}) center/cover no-repeat` : `url(${heroBg}) center/cover no-repeat`
     };
 
     return (
