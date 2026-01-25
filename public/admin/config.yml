@@ -1,0 +1,28 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/assets"
+public_folder: "/assets"
+
+collections:
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - name: "gallery"
+        label: "Progetti Van"
+        file: "public/data/gallery.json"
+        format: "json"
+        fields:
+          - label: "Progetti"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Titolo", name: "title", widget: "string" }
+              - { label: "Descrizione", name: "text", widget: "text" }
+              - { label: "Immagine di copertina", name: "cover", widget: "image" }
+              - label: "Immagini"
+                name: "images"
+                widget: "list"
+                field:
+                  { label: "Immagine", name: "image", widget: "image" }

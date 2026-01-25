@@ -1,35 +1,128 @@
 {
-  "data":
+  "projects":
     [
       {
         "title": "Ganesh Van",
         "text": "Allestimento completo per viaggi off-grid, cucina, letto e pannelli solari.",
         "cover": "/data/gallery_img/ganesh/ganesh1.jpeg",
-        "images": ["/data/gallery_img/ganesh/ganesh1.jpeg", "/data/gallery_img/ganesh/ganesh2.jpeg", "/data/gallery_img/ganesh/ganesh3.jpeg", "/data/gallery_img/ganesh/ganesh4.jpeg", "/data/gallery_img/ganesh/ganesh5.jpeg"]
+        "images": [
+          {
+            "image": "/data/gallery_img/ganesh/ganesh1.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/ganesh/ganesh2.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/ganesh/ganesh3.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/ganesh/ganesh4.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/ganesh/ganesh5.jpeg"
+          }]
       },
       {
         "title": "Oliviero Van",
         "text": "Soluzione compatta, essenziale e super funzionale.",
         "cover": "/data/gallery_img/oliviero/oliviero5.jpeg",
-        "images": ["/data/gallery_img/oliviero/oliviero1.jpeg", "/data/gallery_img/oliviero/oliviero2.jpeg", "/data/gallery_img/oliviero/oliviero3.jpeg", "/data/gallery_img/oliviero/oliviero4.jpeg", "/data/gallery_img/oliviero/oliviero5.jpeg", "/data/gallery_img/oliviero/oliviero6.jpeg", "/data/gallery_img/oliviero/oliviero7.jpeg"]
+        "images": [
+          {
+            "image": "/data/gallery_img/oliviero/oliviero1.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/oliviero/oliviero2.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/oliviero/oliviero3.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/oliviero/oliviero4.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/oliviero/oliviero5.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/oliviero/oliviero6.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/oliviero/oliviero7.jpeg"
+          }]
       },
       {
         "title": "Caddyfornia Van",
         "text": "Spazio per tavole, doccia esterna e mood coastal.",
         "cover": "/data/gallery_img/caddyfornia/caddyfornia1.jpeg",
-        "images": ["/data/gallery_img/caddyfornia/caddyfornia1.jpeg", "/data/gallery_img/caddyfornia/caddyfornia2.jpeg", "/data/gallery_img/caddyfornia/caddyfornia3.jpeg", "/data/gallery_img/caddyfornia/caddyfornia4.jpeg", "/data/gallery_img/caddyfornia/caddyfornia5.jpeg", "/data/gallery_img/caddyfornia/caddyfornia6.jpeg", "/data/gallery_img/caddyfornia/caddyfornia7.jpeg"]
+        "images": [
+          {
+            "image": "/data/gallery_img/caddyfornia/caddyfornia1.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/caddyfornia/caddyfornia2.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/caddyfornia/caddyfornia3.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/caddyfornia/caddyfornia4.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/caddyfornia/caddyfornia5.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/caddyfornia/caddyfornia6.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/caddyfornia/caddyfornia7.jpeg"
+          }]
       },
       {
         "title": "Willy Van",
         "text": "Tutto il necessario per vivere al meglio la van life.",
         "cover": "/data/gallery_img/willy/willy1.jpeg",
-        "images": ["/data/gallery_img/willy/willy1.jpeg", "/data/gallery_img/willy/willy2.jpeg", "/data/gallery_img/willy/willy3.jpeg", "/data/gallery_img/willy/willy4.jpeg", "/data/gallery_img/willy/willy5.jpeg"]
+        "images": [
+          {
+            "image": "/data/gallery_img/willy/willy1.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/willy/willy2.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/willy/willy3.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/willy/willy4.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/willy/willy5.jpeg"
+          }]
       },
       {
         "title": "Wolly Van",
         "text": "Legno di rovere ed eleganza",
         "cover": "/data/gallery_img/wolly/wolly1.jpeg",
-        "images": ["/data/gallery_img/wolly/wolly1.jpeg", "/data/gallery_img/wolly/wolly2.jpeg", "/data/gallery_img/wolly/wolly3.jpeg", "/data/gallery_img/wolly/wolly4.jpeg", "/data/gallery_img/wolly/wolly5.jpeg", "/data/gallery_img/wolly/wolly6.jpeg", "/data/gallery_img/wolly/wolly7.jpeg"]
+        "images": [
+          {
+            "image": "/data/gallery_img/wolly/wolly1.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/wolly/wolly2.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/wolly/wolly3.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/wolly/wolly4.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/wolly/wolly5.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/wolly/wolly6.jpeg"
+          },
+          {
+            "image": "/data/gallery_img/wolly/wolly7.jpeg"
+          }]
       }
 ]
 }
