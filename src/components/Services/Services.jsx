@@ -70,16 +70,13 @@ function Services() {
 
     return (
         <section id="services" className="services fade-in-section" ref={fadeRef}>
-            <Parallax speed={10}>
-                <div className="services-header">
+           <div className="services-header">
                     <h2>Cosa possiamo fare per il tuo van</h2>
                     <p>
                         Ogni progetto nasce su misura. Qui trovi le principali aree su cui
                         interveniamo per trasformare un furgone in casa.
                     </p>
                 </div>
-            </Parallax>
-
             <div className="services-grid">
                 {services.map((service, index) => (
                     <div
@@ -98,60 +95,3 @@ function Services() {
 }
 
 export default Services;
-
-// import "./Services.css";
-// import { FaTools, FaBolt, FaCouch, FaTint, FaFireAlt, FaWater } from "react-icons/fa";
-//
-// function Services() {
-//     return (
-//         <section className="services" id="services">
-//             <div className="services-header">
-//                 <h2>Cosa possiamo fare per il tuo van</h2>
-//                 <p>
-//                     Ogni progetto nasce su misura. Qui trovi le principali aree su cui
-//                     interveniamo per trasformare un furgone in casa.
-//                 </p>
-//             </div>
-//
-//             <div className="services-grid">
-//                 <div className="service-card">
-//                     <FaTools className="service-icon" />
-//                     <h3>Arredi su misura</h3>
-//                     <p>Letti, mobili, cucine e soluzioni intelligenti costruite al millimetro.</p>
-//                 </div>
-//
-//                 <div className="service-card">
-//                     <FaBolt className="service-icon" />
-//                     <h3>Impianto elettrico</h3>
-//                     <p>Batterie, pannelli solari, luci e prese per essere autonomi ovunque.</p>
-//                 </div>
-//
-//                 <div className="service-card">
-//                     <FaTint className="service-icon" />
-//                     <h3>Isolamento termico</h3>
-//                     <p>Caldo d’inverno, fresco d’estate. Comfort vero, non promesse.</p>
-//                 </div>
-//
-//                 <div className="service-card">
-//                     <FaWater className="service-icon" />
-//                     <h3>Impianto idrico</h3>
-//                     <p>Serbatoi, pompe e docce per avere l’acqua sempre con te.</p>
-//                 </div>
-//
-//                 <div className="service-card">
-//                     <FaFireAlt className="service-icon" />
-//                     <h3>Riscaldamento</h3>
-//                     <p>Webasto, diesel heater e soluzioni per le notti fredde.</p>
-//                 </div>
-//
-//                 <div className="service-card">
-//                     <FaCouch className="service-icon" />
-//                     <h3>Layout personalizzato</h3>
-//                     <p>Ogni van è diverso, come chi lo guida. Progettiamo attorno a te.</p>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// }
-//
-// export default Services;

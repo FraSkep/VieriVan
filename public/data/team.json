@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "name": "Marco Rossi",
+      "role": "Founder & CEO",
+      "photo": "/data/team_img/GaneshVan.jpeg"
+    },
+    {
+      "name": "Giulia Bianchi",
+      "role": "Customer Care",
+      "photo": "/data/team_img/gyppaz_photo.jpg"
+    },
+    {
+      "name": "Luca Verdi",
+      "role": "Tecnico Allestimenti",
+      "photo": "/data/team_img/vieri_surf.jpeg"
+    },
+    {
+      "name": "Marco Rossi",
+      "role": "Founder & CEO",
+      "photo": "/data/team_img/caddyfornia1.jpeg"
+    },
+    {
+      "name": "Giulia Bianchi",
+      "role": "Customer Care",
+      "photo": "/data/team_img/oliviero5.jpeg"
+    },
+    {
+      "name": "Luca Verdi",
+      "role": "Tecnico Allestimenti",
+      "photo": "/data/team_img/willy3.jpeg"
+    }
+  ]
+}
