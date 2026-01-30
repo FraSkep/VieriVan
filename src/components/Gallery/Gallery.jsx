@@ -1,4 +1,4 @@
-import {useState, useRef, useEffect} from "react";
+import {useState, useEffect} from "react";
 // import ganesh1 from "../../../public/data/gallery_img/ganesh/ganesh1.jpeg";
 // import ganesh2 from "../../../public/data/gallery_img/ganesh/ganesh2.jpeg";
 // import ganesh3 from "../../../public/data/gallery_img/ganesh/ganesh3.jpeg";
@@ -37,6 +37,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {FiX} from "react-icons/fi";
 import useIsMobile from "../../hooks/useIsMobile.jsx";
 import {BiChevronLeftCircle, BiChevronRightCircle} from "react-icons/bi";
+import useFadeInOnScroll from "../../hooks/useFadeInOnScroll.jsx";
 
 // const projects = [
 //     {
@@ -76,11 +77,12 @@ const Gallery = () => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const isMobile = useIsMobile(1080);
+    const fadeRef = useFadeInOnScroll();
     // const isMobileHorizontal = useIsMobile(1200);
     // const fadeRef = useFadeInOnScroll();
 
-    const touchStartX = useRef(0);
-    const touchEndX = useRef(0);
+    // const touchStartX = useRef(0);
+    // const touchEndX = useRef(0);
     const [direction, setDirection] = useState(0);
     // 1 = avanti (swipe left)
     // -1 = indietro (swipe right)
@@ -137,7 +139,7 @@ const Gallery = () => {
     };
 
     return (
-        <section id="gallery" className="gallery-section">
+        <section id="gallery" className="gallery-section fade-in-section" ref={fadeRef}>
             <h2 className="gallery-title">Lavori realizzati</h2>
             <div className="gallery-grid">
                 {projects && projects.map((project, index) => (

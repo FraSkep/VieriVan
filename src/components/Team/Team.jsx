@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import "./Team.css";
+import useFadeInOnScroll from "../../hooks/useFadeInOnScroll.jsx";
 
 const Team = () => {
     const [team, setTeam] = useState([]);
+    const fadeRef = useFadeInOnScroll();
 
     useEffect(() => {
         fetch("/data/team.json")
@@ -12,7 +14,7 @@ const Team = () => {
     }, []);
 
     return (
-        <section id="team" className="team-section">
+        <section id="team" className="team-section fade-in-section" ref={fadeRef}>
             <h2 className="team-title">Il nostro team</h2>
 
             <div className="team-grid">
