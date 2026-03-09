@@ -11,16 +11,21 @@
 }
 
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 }
 
 .gallery-card {
+    flex: 1 1 280px;
+    max-width: 340px;
+
     background: #2f5d3a;
     border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
+    padding: 6px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -32,6 +37,7 @@
 .gallery-image-wrapper {
     height: 220px;
     overflow: hidden;
+    border-radius: 12px;
 }
 
 .gallery-image-wrapper img {

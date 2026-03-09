@@ -1,34 +1,39 @@
 {
   "data": [
     {
-      "name": "Marco Rossi",
-      "role": "Founder & CEO",
-      "photo": "/data/team_img/GaneshVan.jpeg"
+      "name": "Vieri",
+      "role": "Architetto",
+      "photo": "/data/team_img/arch.jpeg"
     },
     {
-      "name": "Giulia Bianchi",
-      "role": "Customer Care",
-      "photo": "/data/team_img/gyppaz_photo.jpg"
+      "name": "Vieri",
+      "role": "Falegname",
+      "photo": "/data/team_img/fal.jpeg"
     },
     {
-      "name": "Luca Verdi",
-      "role": "Tecnico Allestimenti",
-      "photo": "/data/team_img/vieri_surf.jpeg"
+      "name": "Vieri",
+      "role": "Project Manager",
+      "photo": "/data/team_img/proj.jpeg"
     },
     {
-      "name": "Marco Rossi",
-      "role": "Founder & CEO",
-      "photo": "/data/team_img/caddyfornia1.jpeg"
+      "name": "Vieri",
+      "role": "Elettricista",
+      "photo": "/data/team_img/ele.jpeg"
     },
     {
-      "name": "Giulia Bianchi",
-      "role": "Customer Care",
-      "photo": "/data/team_img/oliviero5.jpeg"
+      "name": "Vieri",
+      "role": "Idraulico",
+      "photo": "/data/team_img/idr.jpeg"
     },
     {
-      "name": "Luca Verdi",
-      "role": "Tecnico Allestimenti",
-      "photo": "/data/team_img/willy3.jpeg"
+      "name": "Vieri",
+      "role": "Meccanico",
+      "photo": "/data/team_img/mec.jpg"
+    },
+    {
+      "name": "Chiara",
+      "role": "Social media manager",
+      "photo": "/data/team_img/social.JPG"
     }
   ]
 }

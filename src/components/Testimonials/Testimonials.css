@@ -63,11 +63,13 @@
 .testimonial-card:hover {
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
     transform: translateY(-6px) scale(1.02);
+    cursor: pointer;
 }
 
 .testimonial-card:hover .testimonial-avatar {
     transform: scale(1.05);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 

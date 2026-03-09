@@ -28,7 +28,7 @@ function Hero() {
                     <div className="hero-logo" />
 
                     <div className="hero-title-container">
-                        <h1>
+                        <h1 className="hero-title">
                             Trasformiamo van <br /> in liberta' su quattro ruote
                         </h1>
 

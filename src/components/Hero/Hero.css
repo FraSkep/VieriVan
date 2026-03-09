@@ -69,20 +69,6 @@
     align-items: center;
 }
 
-/*.hero {*/
-/*    min-height: 100vh;*/
-/*    background-color: #f6e7cf;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: center;*/
-/*    padding: 2rem;*/
-/*}*/
-
-/*.hero-content {*/
-/*    max-width: 900px;*/
-/*    text-align: center;*/
-/*}*/
-
 .hero-logo {
     background: url("/src/assets/loghi/logo5t.png") center/cover no-repeat;
     position: relative;
@@ -90,35 +76,3 @@
     margin-bottom: 2rem;
 }
 
-/*.hero h1 {*/
-/*    font-size: clamp(2.5rem, 5vw, 4rem);*/
-/*    color: #2f5d3a;*/
-/*    line-height: 1.1;*/
-/*    margin-bottom: 1.5rem;*/
-/*    font-weight: 800;*/
-/*}*/
-
-/*.hero p {*/
-/*    font-size: 1.2rem;*/
-/*    color: #1f1f1f;*/
-/*    margin-bottom: 2.5rem;*/
-/*    max-width: 600px;*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*}*/
-
-/*.hero-button {*/
-/*    display: inline-block;*/
-/*    padding: 0.9rem 2rem;*/
-/*    background-color: #2f5d3a;*/
-/*    color: #fff;*/
-/*    text-decoration: none;*/
-/*    font-weight: 600;*/
-/*    border-radius: 6px;*/
-/*    transition: transform 0.2s ease, box-shadow 0.2s ease;*/
-/*}*/
-
-/*.hero-button:hover {*/
-/*    transform: translateY(-2px);*/
-/*    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);*/
-/*}*/
