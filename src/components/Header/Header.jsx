@@ -6,7 +6,7 @@ import logo from "../../assets/loghi/logo1t.png";
 import miniLogo from "../../assets/loghi/logo4t.png"
 import useIsMobile from "../../hooks/useIsMobile.jsx";
 
-const sections = ["hero", "gallery", "services", "testimonials", "contact"];
+const sections = ["hero", "gallery", "services", "team", "testimonials", "contact"];
 
 function Header() {
     const [scrolled, setScrolled] = useState(false);
@@ -55,6 +55,7 @@ function Header() {
                             {section === "hero" && "Home"}
                             {section === "gallery" && "Lavori"}
                             {section === "services" && "Servizi"}
+                            {section === "team" && "Team"}
                             {section === "testimonials" && "Testimonianze"}
                             {section === "contact" && "Contatti"}
                         </a>
@@ -85,6 +86,7 @@ function Header() {
                         {section === "hero" && "Home"}
                         {section === "services" && "Servizi"}
                         {section === "gallery" && "Lavori"}
+                        {section === "team" && "Team"}
                         {section === "testimonials" && "Testimonianze"}
                         {section === "contact" && "Contatti"}
                     </a>

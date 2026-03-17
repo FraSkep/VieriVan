@@ -9,17 +9,7 @@
     color: #2f5d3a;
 }
 
-/*.team-title::after {*/
-/*    content: "";*/
-/*    display: block;*/
-/*    width: 60px;*/
-/*    height: 3px;*/
-/*    margin: 14px auto 0;*/
-/*    background: #2f5d3a;*/
-/*    border-radius: 2px;*/
-/*}*/
-
-/* LAYOUT */
+/* ── Layout ────────────────────────────────────────────────────────────────── */
 
 .team-grid {
     display: flex;
@@ -30,7 +20,7 @@
     margin: 0 auto;
 }
 
-/* CARD */
+/* ── Card ──────────────────────────────────────────────────────────────────── */
 
 .team-card {
     flex: 1 1 260px;
@@ -38,16 +28,15 @@
     border-radius: 18px;
     padding: 8px;
     background: white;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     cursor: pointer;
-    transition: transform .4s ease, box-shadow .4s ease;
-}
 
-.team-card {
     opacity: 0;
     transform: translateY(40px);
     animation: teamFade .8s ease forwards;
+
+    transition: transform .4s ease, box-shadow .4s ease;
 }
 
 .team-card:nth-child(1) { animation-delay: .1s; }
@@ -64,23 +53,22 @@
     }
 }
 
-.team-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 40px rgba(0,0,0,0.12);
-}
-
-/* sfalsamento */
-
+/* sfalsamento verticale su desktop */
 .team-card.offset {
     transform: translateY(40px);
 }
 
-/* IMAGE */
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Image ─────────────────────────────────────────────────────────────────── */
 
 .team-image-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 14px;
 }
@@ -92,13 +80,11 @@
     transition: transform .7s ease;
 }
 
-/* ZOOM */
-
 .team-card:hover img {
     transform: scale(1.1);
 }
 
-/* OVERLAY */
+/* ── Overlay ───────────────────────────────────────────────────────────────── */
 
 .team-overlay {
     position: absolute;
@@ -106,17 +92,9 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
     padding: 20px;
-
-    background: linear-gradient(
-            to top,
-            rgba(0,0,0,0.65),
-            rgba(0,0,0,0)
-    );
-
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0));
     color: white;
-
     opacity: 0;
     transition: opacity .35s ease;
 }
@@ -136,70 +114,23 @@
     opacity: .85;
 }
 
-/* MOBILE */
-
-@media (hover: none) {
-
+/* ── Mobile (touchscreen reale) ────────────────────────────────────────────── */
+/*
+    NOTA: usiamo (pointer: coarse) invece di (hover: none).
+    Su dispositivi touch reali (iOS, Android) pointer è sempre "coarse".
+    La media query (hover: none) è inaffidabile su Safari/iOS in produzione,
+    motivo per cui l'overlay non appariva su Netlify ma funzionava in locale.
+*/
+@media (pointer: coarse) {
     .team-overlay {
-        opacity: 1;
+        opacity: 1;         /* sempre visibile su touch */
     }
 
     .team-card.offset {
-        transform: none;
+        transform: none;    /* niente sfalsamento verticale su mobile */
     }
 
+    .team-card:hover {
+        transform: none;    /* disabilita hover lift su touch */
+    }
 }
-/*.team-section {*/
-/*    padding: 80px 20px;*/
-/*    text-align: center;*/
-/*}*/
-
-/*.team-title {*/
-/*    font-size: clamp(2rem, 4vw, 3rem);*/
-/*    margin-bottom: 50px;*/
-/*    color: #2f5d3a;*/
-/*}*/
-
-/*.team-grid {*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    justify-content: center;*/
-/*    gap: 30px;*/
-/*    max-width: 1200px;*/
-/*    margin: 0 auto;*/
-/*}*/
-
-/*.team-card {*/
-/*    background: #fff;*/
-/*    border-radius: 12px;*/
-/*    padding: 20px;*/
-/*    transition: transform .3s ease;*/
-/*    flex: 1 1 220px;*/
-/*    max-width: 260px;*/
-/*}*/
-
-/*.team-card:hover {*/
-/*    transform: translateY(-5px);*/
-/*}*/
-
-/*.team-image-wrapper {*/
-/*    width: 100%;*/
-/*    aspect-ratio: 1 / 1;*/
-/*    overflow: hidden;*/
-/*    border-radius: 10px;*/
-/*    margin-bottom: 15px;*/
-/*}*/
-
-/*.team-image-wrapper img {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    object-fit: cover;*/
-/*}*/
-
-/*.team-card h3 {*/
-/*    margin: 10px 0 5px;*/
-/*}*/
-
-/*.team-card p {*/
-/*    opacity: .7;*/
-/*}*/

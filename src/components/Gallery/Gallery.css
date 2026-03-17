@@ -20,7 +20,6 @@
 .gallery-card {
     flex: 1 1 280px;
     max-width: 340px;
-
     background: #2f5d3a;
     border-radius: 16px;
     overflow: hidden;
@@ -31,7 +30,7 @@
 
 .gallery-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 .gallery-image-wrapper {
@@ -65,22 +64,41 @@
     color: #bbb;
 }
 
-/* LIGHTBOX */
+/* ── LIGHTBOX ──────────────────────────────────────────────────────────────── */
 
 .lightbox {
-    position: fixed;
+    position: fixed;    /* funziona grazie al Portal: nessun antenato con transform */
     inset: 0;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.92);
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
-    animation: fadeIn 0.3s ease forwards;
+    z-index: 9999;
+    animation: fadeIn 0.25s ease forwards;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Close button: ancorato all'angolo della VIEWPORT, non di lightbox-content */
+.lightbox-close {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    background: rgba(0, 0, 0, 0.55);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s ease, transform 0.2s ease;
+    z-index: 10000;
+}
+
+.lightbox-close:hover {
+    background: #2f5d3a;
+    transform: scale(1.1);
 }
 
 .lightbox-content {
@@ -92,18 +110,8 @@
     align-items: center;
 }
 
-.lightbox-image {
-    position: relative;
-    inset: 0;                 /* ← occupa tutto il contenitore */
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 14px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-}
-
 .lightbox-slider {
-    position: relative; /* ← FONDAMENTALE */
+    position: relative;
     width: 100%;
     max-width: 900px;
     height: 70vh;
@@ -113,9 +121,23 @@
     overflow: hidden;
 }
 
+.lightbox-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    cursor: grab;
+    user-select: none;
+}
+
 .lightbox-image:active {
     cursor: grabbing;
 }
+
+/* ── Controls ──────────────────────────────────────────────────────────────── */
 
 .slider-controls {
     display: flex;
@@ -127,10 +149,9 @@
 .slider-btn {
     color: #2f5d3a;
     font-size: 2rem;
-    bottom: 0;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.2s ease;
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
+    transition: color 0.2s ease, transform 0.2s ease;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.6));
 }
 
 .slider-btn:hover {
@@ -138,25 +159,12 @@
     transform: scale(1.1);
 }
 
-.slider-btn.left {
-    left: 10px;
-}
-
-.slider-btn.right {
-    right: 10px;
-}
-
-/* DOTS */
+/* ── Dots ──────────────────────────────────────────────────────────────────── */
 
 .slider-dots {
     display: flex;
     justify-content: center;
     margin: 16px 0 12px;
-}
-
-.lightbox-text {
-    margin-top: 12px;
-    text-align: center;
 }
 
 .dot {
@@ -166,6 +174,7 @@
     background: #555;
     margin: 0 5px;
     transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
 }
 
 .dot.active {
@@ -173,11 +182,11 @@
     transform: scale(1.2);
 }
 
-/* TEXT */
+/* ── Text ──────────────────────────────────────────────────────────────────── */
 
 .lightbox-text {
+    margin-top: 12px;
     text-align: center;
-    /*margin-top: 10px;*/
 }
 
 .lightbox-text h3 {
@@ -191,28 +200,20 @@
     max-width: 600px;
 }
 
-.lightbox-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 50%;
-    padding: 10px;
-    cursor: pointer;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease, transform 0.2s ease;
-    z-index: 10;
+/* ── Animations ────────────────────────────────────────────────────────────── */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.lightbox-close:hover {
-    background: #2f5d3a;
-    transform: scale(1.1);
-}
-/* MOBILE */
+/* ── Mobile ────────────────────────────────────────────────────────────────── */
 
 @media (max-width: 768px) {
     .gallery-title {
@@ -224,27 +225,15 @@
     }
 
     .lightbox-slider {
-        position: relative;
-        width: 100%;
-        max-width: 900px;
         height: 60vh;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        will-change: transform;
     }
 
     .lightbox-image {
         max-height: 60vh;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        user-select: none;
-        cursor: grab;
     }
 }
+
+/* ── Landscape su schermi piccoli ──────────────────────────────────────────── */
 
 @media (max-width: 1080px) and (orientation: landscape) {
     .lightbox-content {
@@ -264,16 +253,5 @@
         width: 40%;
         overflow-y: auto;
         max-height: 80vh;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.96);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
     }
 }
