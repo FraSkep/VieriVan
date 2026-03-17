@@ -27,8 +27,8 @@ const Team = () => {
                             <img src={member.photo} alt={member.name} />
 
                             <div className="team-overlay">
-                                <h3>{member.name}</h3>
-                                <p>{member.role}</p>
+                                <h3>{member.role}</h3>
+                                <p>{member.name}</p>
                             </div>
                         </div>
                     </div>
