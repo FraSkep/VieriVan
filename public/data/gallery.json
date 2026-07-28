@@ -2,6 +2,12 @@
   "data":
     [
       {
+        "title": "Pagu",
+        "text": "Una casa su ruote a tutti gli effetti con una cucina enorme e l'immancabile doccia.",
+        "cover": "/data/gallery_img/Pagu/Pagu1.jpg",
+        "images": ["/data/gallery_img/Pagu/Pagu1.jpg", "/data/gallery_img/Pagu/Pagu2.jpg", "/data/gallery_img/Pagu/Pagu3.jpg"]
+      },
+      {
         "title": "Ganesh Van",
         "text": "Allestimento completo per viaggi off-grid, cucina, letto e pannelli solari.",
         "cover": "/data/gallery_img/ganesh/ganesh1.jpeg",
@@ -18,12 +24,6 @@
         "text": "Spazio per tavole, doccia esterna e mood coastal.",
         "cover": "/data/gallery_img/caddyfornia/caddyfornia1.jpeg",
         "images": ["/data/gallery_img/caddyfornia/caddyfornia1.jpeg", "/data/gallery_img/caddyfornia/caddyfornia2.jpeg", "/data/gallery_img/caddyfornia/caddyfornia3.jpeg", "/data/gallery_img/caddyfornia/caddyfornia4.jpeg", "/data/gallery_img/caddyfornia/caddyfornia5.jpeg", "/data/gallery_img/caddyfornia/caddyfornia6.jpeg", "/data/gallery_img/caddyfornia/caddyfornia7.jpeg"]
-      },
-      {
-        "title": "Willy Van",
-        "text": "Tutto il necessario per vivere al meglio la van life.",
-        "cover": "/data/gallery_img/willy/willy1.jpeg",
-        "images": ["/data/gallery_img/willy/willy1.jpeg", "/data/gallery_img/willy/willy2.jpeg", "/data/gallery_img/willy/willy3.jpeg", "/data/gallery_img/willy/willy4.jpeg", "/data/gallery_img/willy/willy5.jpeg"]
       },
       {
         "title": "Wolly Van",
@@ -43,5 +43,5 @@
       "cover": "/data/gallery_img/sesamo/sesamo_1.jpeg",
       "images": ["/data/gallery_img/sesamo/sesamo_1.jpeg", "/data/gallery_img/sesamo/sesamo_2.jpeg", "/data/gallery_img/sesamo/sesamo_3.jpeg", "/data/gallery_img/sesamo/sesamo_4.jpeg", "/data/gallery_img/sesamo/sesamo_5.jpeg", "/data/gallery_img/sesamo/sesamo_6.jpeg"]
       }
-]
+  ]
 }
