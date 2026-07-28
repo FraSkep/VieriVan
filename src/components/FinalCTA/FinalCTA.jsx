@@ -35,7 +35,7 @@ function FinalCTA() {
                         {/*</button>*/}
 
                         <div className="final-cta-contacts">
-                            <span>📞 +39 XXX XXX XXXX</span>
+                            <span>📞 +39 339 160 7579</span>
                             <span>✉️ Vierivanlife@gmail.com</span>
                             <span className="instagram">
                             📸 <a href="https://www.instagram.com/vieri_van" target="_blank" rel="noreferrer">
