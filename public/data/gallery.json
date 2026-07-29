@@ -3,9 +3,15 @@
     [
       {
         "title": "Pagu",
-        "text": "Una casa su ruote a tutti gli effetti con una cucina enorme e l'immancabile doccia.",
+        "text": "Una casa su ruote a tutti gli effetti con una cucina molto grande e l'immancabile doccia.",
         "cover": "/data/gallery_img/Pagu/Pagu1.jpg",
-        "images": ["/data/gallery_img/Pagu/Pagu1.jpg", "/data/gallery_img/Pagu/Pagu2.jpg", "/data/gallery_img/Pagu/Pagu3.jpg"]
+        "images": ["/data/gallery_img/Pagu/Pagu1.jpg", "/data/gallery_img/Pagu/Pagu2.jpg", "/data/gallery_img/Pagu/Pagu3.jpg", "/data/gallery_img/Pagu/Pagu4.jpg", "/data/gallery_img/Pagu/Pagu5.jpg", "/data/gallery_img/Pagu/Pagu6.jpg", "/data/gallery_img/Pagu/Pagu7.jpg", "/data/gallery_img/Pagu/Pagu8.jpg"]
+      },
+      {
+        "title": "Elly Van",
+        "text": "Elly è il progetto perfetto per chi ama vivere l'avventura senza compromessi ma con uno stile elegante",
+        "cover": "/data/gallery_img/Elly/Elly1.jpg",
+        "images": ["/data/gallery_img/Elly/Elly1.jpg", "/data/gallery_img/Elly/Elly2.jpg", "/data/gallery_img/Elly/Elly3.jpg", "/data/gallery_img/Elly/Elly4.jpg", "/data/gallery_img/Elly/Elly5.jpg", "/data/gallery_img/Elly/Elly6.jpg", "/data/gallery_img/Elly/Elly7.jpg", "/data/gallery_img/Elly/Elly8.jpg"]
       },
       {
         "title": "Ganesh Van",
@@ -15,31 +21,31 @@
       },
       {
         "title": "Oliviero Van",
-        "text": "Soluzione compatta, essenziale e super funzionale.",
+        "text": "Dove lo spazio e il legno si fondono per dare armonia ai tuoi viaggi.",
         "cover": "/data/gallery_img/oliviero/oliviero5.jpeg",
         "images": ["/data/gallery_img/oliviero/oliviero1.jpeg", "/data/gallery_img/oliviero/oliviero2.jpeg", "/data/gallery_img/oliviero/oliviero3.jpeg", "/data/gallery_img/oliviero/oliviero4.jpeg", "/data/gallery_img/oliviero/oliviero5.jpeg", "/data/gallery_img/oliviero/oliviero6.jpeg", "/data/gallery_img/oliviero/oliviero7.jpeg"]
       },
       {
         "title": "Caddyfornia Van",
-        "text": "Spazio per tavole, doccia esterna e mood coastal.",
+        "text": "Tutto quello che puoi desiderare nel van piu piccolo sul mercato.",
         "cover": "/data/gallery_img/caddyfornia/caddyfornia1.jpeg",
         "images": ["/data/gallery_img/caddyfornia/caddyfornia1.jpeg", "/data/gallery_img/caddyfornia/caddyfornia2.jpeg", "/data/gallery_img/caddyfornia/caddyfornia3.jpeg", "/data/gallery_img/caddyfornia/caddyfornia4.jpeg", "/data/gallery_img/caddyfornia/caddyfornia5.jpeg", "/data/gallery_img/caddyfornia/caddyfornia6.jpeg", "/data/gallery_img/caddyfornia/caddyfornia7.jpeg"]
       },
       {
-        "title": "Wolly Van",
-        "text": "Legno di rovere ed eleganza",
-        "cover": "/data/gallery_img/wolly/wolly1.jpeg",
-        "images": ["/data/gallery_img/wolly/wolly1.jpeg", "/data/gallery_img/wolly/wolly2.jpeg", "/data/gallery_img/wolly/wolly3.jpeg", "/data/gallery_img/wolly/wolly4.jpeg", "/data/gallery_img/wolly/wolly5.jpeg", "/data/gallery_img/wolly/wolly6.jpeg", "/data/gallery_img/wolly/wolly7.jpeg"]
+        "title": "Copacati Van",
+        "text": "Copacati un van elegante e compatto, con moltissimo spazio a disposizione per le tue vacanze.",
+        "cover": "/data/gallery_img/Copacati/Copacati1.jpg",
+        "images": ["/data/gallery_img/Copacati/Copacati1.jpg", "/data/gallery_img/Copacati/Copacati2.jpg", "/data/gallery_img/Copacati/Copacati3.jpg", "/data/gallery_img/Copacati/Copacati4.jpg", "/data/gallery_img/Copacati/Copacati5.jpg", "/data/gallery_img/Copacati/Copacati6.jpg", "/data/gallery_img/Copacati/Copacati7.jpg"]
       },
       {
-        "title": "Namaste Van",
+        "title": "Durga Van",
         "text": "Un van pensato per rallentare il ritmo e ritrovare equilibrio tra viaggio, natura e semplicità.",
         "cover": "/data/gallery_img/namaste_van/IMG_3.jpeg",
         "images": ["/data/gallery_img/namaste_van/IMG_1.jpeg", "/data/gallery_img/namaste_van/IMG_2.jpeg", "/data/gallery_img/namaste_van/IMG_3.jpeg", "/data/gallery_img/namaste_van/IMG_4.jpeg", "/data/gallery_img/namaste_van/IMG_5.jpeg", "/data/gallery_img/namaste_van/IMG_6.jpeg", "/data/gallery_img/namaste_van/IMG_7.jpeg","/data/gallery_img/namaste_van/IMG_8.jpeg", "/data/gallery_img/namaste_van/IMG_9.jpeg", "/data/gallery_img/namaste_van/IMG_10.jpeg", "/data/gallery_img/namaste_van/IMG_11.jpeg", "/data/gallery_img/namaste_van/IMG_12.jpeg", "/data/gallery_img/namaste_van/IMG_13.jpeg", "/data/gallery_img/namaste_van/IMG_14.jpeg", "/data/gallery_img/namaste_van/IMG_15.jpeg", "/data/gallery_img/namaste_van/IMG_16.jpeg"]
       },
       {
       "title": "Sesamo",
-      "text": "Un van pensato per rallentare il ritmo e ritrovare equilibrio tra viaggio, natura e semplicità.",
+      "text": "Un van compatto con una cucina esterna e uno stile rustico pronto per qualsiasi terreno.",
       "cover": "/data/gallery_img/sesamo/sesamo_1.jpeg",
       "images": ["/data/gallery_img/sesamo/sesamo_1.jpeg", "/data/gallery_img/sesamo/sesamo_2.jpeg", "/data/gallery_img/sesamo/sesamo_3.jpeg", "/data/gallery_img/sesamo/sesamo_4.jpeg", "/data/gallery_img/sesamo/sesamo_5.jpeg", "/data/gallery_img/sesamo/sesamo_6.jpeg"]
       }
