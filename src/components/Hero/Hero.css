@@ -5,6 +5,7 @@
 .hero-epic {
     position: relative;
     min-height: 100vh;
+    min-height: 100dvh;
     /*width: 100%;*/
     background-size: cover;
     background-position: center;
