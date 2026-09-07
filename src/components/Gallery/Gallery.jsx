@@ -45,12 +45,12 @@ const swipeVariants = {
 };
 
 // ─── Lightbox (rendered via Portal → sempre sopra tutto) ─────────────────────
-const Lightbox = ({ project, currentIndex, direction, isMobile, onClose, onNext, onPrev }) => {
+const Lightbox = ({ project, currentIndex, direction, isMobile, onClose, onNext, onPrev, onDotClick }) => {
     return createPortal(
         <div className="lightbox" onClick={onClose}>
             {/* Pulsante chiudi: ancorato alla viewport, NON dentro lightbox-content */}
             <button className="lightbox-close" onClick={onClose} aria-label="Chiudi">
-                <FiX size={22} />
+                <FiX size={22} color="#fff" />
             </button>
 
             <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
@@ -84,17 +84,34 @@ const Lightbox = ({ project, currentIndex, direction, isMobile, onClose, onNext,
                 {/* Frecce solo su desktop */}
                 {!isMobile && (
                     <div className="slider-controls">
-                        <BiChevronLeftCircle  className="slider-btn left"  onClick={onPrev} />
-                        <BiChevronRightCircle className="slider-btn right" onClick={onNext} />
+                        <button
+                            type="button"
+                            className="slider-btn left"
+                            onClick={onPrev}
+                            aria-label="Foto precedente"
+                        >
+                            <BiChevronLeftCircle />
+                        </button>
+                        <button
+                            type="button"
+                            className="slider-btn right"
+                            onClick={onNext}
+                            aria-label="Foto successiva"
+                        >
+                            <BiChevronRightCircle />
+                        </button>
                     </div>
                 )}
 
                 <div className="slider-dots">
                     {project.images.map((_, i) => (
-                        <span
+                        <button
+                            type="button"
                             key={i}
                             className={`dot ${i === currentIndex ? "active" : ""}`}
-                            onClick={() => {/* opzionale: click su dot */}}
+                            onClick={() => onDotClick(i)}
+                            aria-label={`Vai alla foto ${i + 1}`}
+                            aria-current={i === currentIndex}
                         />
                     ))}
                 </div>
@@ -116,7 +133,7 @@ const Gallery = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [direction, setDirection]             = useState(0);
 
-    const isMobile = useIsMobile(1080);
+    const isMobile = useIsMobile(768); // stessa soglia del media query in Gallery.css
     const fadeRef  = useFadeInOnScroll();
 
     // Fetch gallery data
@@ -174,6 +191,14 @@ const Gallery = () => {
         );
     }, [selectedProject]);
 
+    const handleDotClick = useCallback((index) => {
+        setCurrentImageIndex((prev) => {
+            if (index === prev) return prev;
+            setDirection(index > prev ? 1 : -1);
+            return index;
+        });
+    }, []);
+
     return (
         <section id="gallery" className="gallery-section fade-in-section" ref={fadeRef}>
             <h2 className="gallery-title">Lavori realizzati</h2>
@@ -207,6 +232,7 @@ const Gallery = () => {
                     onClose={handleClose}
                     onNext={handleNext}
                     onPrev={handlePrev}
+                    onDotClick={handleDotClick}
                 />
             )}
         </section>
