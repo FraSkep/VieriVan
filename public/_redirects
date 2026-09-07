@@ -1,0 +1,5 @@
+# Dominio primario: vierivan.com (senza www)
+# Ogni altra variante viene reindirizzata con 301 per evitare contenuti duplicati agli occhi di Google.
+https://vierivan.it/*       https://vierivan.com/:splat  301!
+https://www.vierivan.it/*   https://vierivan.com/:splat  301!
+https://www.vierivan.com/*  https://vierivan.com/:splat  301!
